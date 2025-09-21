@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, lightgreen, purple);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0 30px 0 30px;
+    padding: 30px 0px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0px;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+       flex: 1;
+}
+
+.btn:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+.buttons img {
+       width:70%;
+       height: auto;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#computer-score,
+#your-score {
+    border: 1px solid lightblue;
+    border-radius: 50%;
+    padding: 2px 7px;
+    background-color: lightblue;
+    display: none;
+}
+
+#your-choise{
+    color:lightgreen;
+}
+
+#computer-choise{
+    color: purple;
+}
+
+.result {
+    font-size: 20px;
+    background-color: lightblue;
+    padding: 10px 40px;
+    margin: 40px 0px 10px 0px;
+    border-radius: 25px;
+}
+
+#reset-btn{
+    background: linear-gradient(to right, purple, lightgreen);
+    color:white;
+    font-weight: bold;
+    border:none;
+    padding:8px 15px;
+    display: none;
+}
+
+
+@media screen and (max-width:850px){
+    .container{
+        width:80%;
+    }
+
+    .buttons{
+        width:80%;
+        margin:auto;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+}
