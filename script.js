@@ -8,10 +8,11 @@ const resetBtn = document.querySelector('#reset-btn');
 
 let compScore = 0;
 let yourScore = 0;
-const options = ['rock', 'paper', 'scissors'];
+
 
 
 function getComputerChoise() {
+    const options = ['rock', 'paper', 'scissors'];
     let randomChoise= options[Math.floor(Math.random()*options.length)];
     return randomChoise;
 }
@@ -27,7 +28,9 @@ function getWinner(user, computer) {
     } else {
         return `computer`;
     }
-}   
+}  
+
+
 
 function playGame(choise) {
     const computerChoise = getComputerChoise();
@@ -37,8 +40,6 @@ function playGame(choise) {
     const winner = getWinner(choise, computerChoise);
     if (winner === 'user') {
         yourScore++;
-        console.log(resultText);
-        
         resultText.innerHTML = 'You win!';
     } else if (winner === 'computer') {
         compScore++;
@@ -48,9 +49,9 @@ function playGame(choise) {
     }
 
     yourScoreEl.innerHTML = yourScore;
-    yourScoreEl.style.display = 'block';
+    yourScoreEl.style.display = 'inline-block';
     compScoreEl.innerHTML = compScore;
-    compScoreEl.style.display = 'block';
+    compScoreEl.style.display = 'inline-block';
 }
 
 
@@ -62,9 +63,15 @@ btns.forEach(btn => {
 });
 
 
-// resetBtn.addEventListener('click', () => {
-   
-// });
+resetBtn.addEventListener('click', () => {
+   compScoreEl.innerText = 0;
+    yourScoreEl.innerText = 0;
+    yourChoiseEl.innerText = '';
+    compChoiseEl.innerText = '';
+    resultText.innerText = 'Your Result';
+    compScore = 0;
+    yourScore = 0;
+});
 
 
 

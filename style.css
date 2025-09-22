@@ -84,8 +84,9 @@ body {
     color:white;
     font-weight: bold;
     border:none;
-    padding:8px 15px;
-    display: none;
+    border-radius:50%;
+    cursor:pointer;
+    padding:10px 20px;
 }
 
 
